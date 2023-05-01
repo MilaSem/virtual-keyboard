@@ -68,13 +68,13 @@ const buttonsObj = {
 
   Backspace: {
     key: { base: { en: 'Backspace', ru: 'Backspace' }, additional: { en: 'Backspace', ru: 'Backspace' } },
-    type: 'func',
+    type: 'func-large',
   },
 
   // вторая строка клавиатуры
   Tab: {
     key: { base: { en: 'Tab', ru: 'Tab' }, additional: { en: 'Tab', ru: 'Tab' } },
-    type: 'func',
+    type: 'func-medium',
   },
 
   KeyQ: {
@@ -145,7 +145,7 @@ const buttonsObj = {
   // третья строка клавиатуры
   CapsLock: {
     key: { base: { en: 'CapsLock', ru: 'CapsLock' }, additional: { en: 'CapsLock', ru: 'CapsLock' } },
-    type: 'func',
+    type: 'func-large',
   },
 
   KeyA: {
@@ -205,13 +205,13 @@ const buttonsObj = {
 
   Enter: {
     key: { base: { en: 'Enter', ru: 'Enter' }, additional: { en: 'Enter', ru: 'Enter' } },
-    type: 'func',
+    type: 'func-large',
   },
 
   // четвёртая строка клавиатуры
   ShiftLeft: {
     key: { base: { en: 'Shift', ru: 'Shift' }, additional: { en: 'Shift', ru: 'Shift' } },
-    type: 'func',
+    type: 'func-medium',
   },
 
   IntlBackslash: {
@@ -281,7 +281,7 @@ const buttonsObj = {
 
   // пятая строка клавиатуры
   ControlLeft: {
-    key: { base: { en: 'Control', ru: 'Control' }, additional: { en: 'Control', ru: 'Control' } },
+    key: { base: { en: 'Ctrl', ru: 'Ctrl' }, additional: { en: 'Ctrl', ru: 'Ctrl' } },
     type: 'func',
   },
 
@@ -297,7 +297,7 @@ const buttonsObj = {
 
   Space: {
     key: { base: { en: ' ', ru: ' ' }, additional: { en: ' ', ru: ' ' } },
-    type: 'func',
+    type: 'print-space',
   },
 
   AltRight: {
@@ -306,7 +306,7 @@ const buttonsObj = {
   },
 
   ControlRight: {
-    key: { base: { en: 'Control', ru: 'Control' }, additional: { en: 'Control', ru: 'Control' } },
+    key: { base: { en: 'Ctrl', ru: 'Ctrl' }, additional: { en: 'Ctrl', ru: 'Ctrl' } },
     type: 'func',
   },
 
@@ -347,7 +347,7 @@ class Keyboard {
       const button = document.createElement('button');
       button.textContent = buttonsObj[item].key[this.register][this.lang];
       button.classList.add('keyboard__button');
-      button.classList.add(`keyboard__button-${buttonsObj[item].type}`);
+      button.classList.add(`keyboard__button--${buttonsObj[item].type}`);
       button.dataset.code = item;
       fragment.appendChild(button);
     });
