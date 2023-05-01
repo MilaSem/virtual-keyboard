@@ -1,0 +1,9 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "no-console": "off",
+    "no-undef": "off",
+    "space-before-function-paren": "off",
+    "import/extensions": "always"
+  } 
+}
